@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
         if (_pastTime >= _secondsBetweenSpawn)
         {
             _pastTime = 0;
-            Instantiate(_enemyPrefab, _spawnPoints[Random.Range(0, _spawnPoints.Length - 1)]);
+            Instantiate(_enemyPrefab, _spawnPoints[Random.Range(0, _spawnPoints.Length)]);
         }
     }
 }
