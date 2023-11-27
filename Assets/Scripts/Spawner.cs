@@ -15,10 +15,12 @@ public class Spawner : MonoBehaviour
      
     private IEnumerator EnemySpawn()
     {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(_secondsBetweenSpawn);
+
         while (true)
         {
             Instantiate(_prefab, _spawnPoints[Random.Range(0, _spawnPoints.Length)]);
-            yield return new WaitForSeconds(_secondsBetweenSpawn);
+            yield return waitForSeconds;
         }
     }
 }
